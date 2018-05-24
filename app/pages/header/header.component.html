@@ -1,0 +1,26 @@
+    <Page xmlns="http://schemas.nativescript.org/tns.xsd">
+
+        <ActionBar>
+            <NavigationButton icon="res://menu" (tap)="toggleDrawer()"></NavigationButton>
+        </ActionBar>
+
+        <RadSideDrawer #sidedrawerId tkExampleTitle tkToggleNavButton>
+          <StackLayout tkDrawerContent class="sideStackLayout">
+            <StackLayout class="sideTitleStackLayout">
+              <Label text="Menu"></Label>
+            </StackLayout>
+            <StackLayout class="sideStackLayout">
+              <Button text="Actualités" class="sideLabel sideLightLabel" (tap)="onTapActu()"></Button>
+              <Button text="Contacts" class="sideLabel sideDarkLabel" (tap)="onTapContacts()"></Button>
+              <Button text="Profil" class="sideLabel sideLightLabel" (tap)="onTapProfil()"></Button>
+              <Button text="À propos" class="sideLabel sideDarkLabel" (tap)="onTapAbout()"></Button>
+              <Button text="Se déconnecter" class="sideLabel sideLightLabel" (tap)="onTapLogout()"></Button>
+            </StackLayout>
+            <Button text="Close Drawer" color="white" padding="10" style="align-self: center" (tap)="onCloseDrawerTap()"></Button>
+          </StackLayout>
+
+          <StackLayout tkMainContent>
+            <router-outlet></router-outlet>
+          </StackLayout>
+        </RadSideDrawer>
+      </Page>

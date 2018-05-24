@@ -1,0 +1,9 @@
+<StackLayout #container marginTop="100em">
+    <TextField class="input" hint="Email Address" keyboardType="email" [(ngModel)]="user.email"
+      autocorrect="false" autocapitalizationType="none"></TextField>
+    <TextField class="input" hint="Password" secure="true" [(ngModel)]="user.password"></TextField>
+
+    <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'" class="btn btn-primary" (tap)="submit()"></Button>
+    <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" class="btn btn-danger" (tap)="toggleDisplay()"></Button>
+    <!--<Image src="res://center" stretch="aspectFit" horizontalAlignment="center"></Image>-->
+  </StackLayout>

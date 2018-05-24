@@ -1,0 +1,19 @@
+.about {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
+  font-family: 'Roboto Medium';
+  font-size: 14;
+  horizontal-align: center;
+  color: azure;
+}
+
+.title {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
+  font-family: 'Roboto Medium';
+  font-size: 18;
+  color:darkcyan;
+  font-weight: bold;
+}

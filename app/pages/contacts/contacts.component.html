@@ -1,0 +1,18 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+xmlns:PullRefresh="nativescript-pulltorefresh"
+loaded="pageLoaded">
+<StackLayout>
+        <Button verticalAlignment="top" class="btn btn-outlined" text="Actualiser les contacts" (tap)="showContacts()"></Button>
+    <ListView [items]="contacts" class="list-group">
+        <ng-template tkListItemTemplate let-contact="item">
+            <GridLayout columns="auto,*,auto" class="list-group-item">
+                <Label class="contacts" [text]="contact"></Label>
+                <Button class="m-5" col="2" horizontalAlignment="right" width="40" height="40" (tap)="delete(contact)" text="✗"></Button>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+    <Button verticalAlignment="bottom" class="btn btn-primary" text="Ajouter un contact" (tap)="findContacts()"></Button>
+    <Button verticalAlignment="bottom" class="btn btn-danger" text="Sauvegarder" (tap)="save()"></Button>
+</StackLayout>
+</Page>
